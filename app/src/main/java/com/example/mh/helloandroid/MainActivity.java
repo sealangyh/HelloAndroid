@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         String sInfo = String.format("Task ID: %s\n Current Activity id: %s", getTaskId(), this.toString());
         tvInfo.setText(sInfo);
 
-        findViewById(R.id.btnStartMainActivity).setOnClickListener(new View.OnClickListener(){
+        findViewById(R.id.btnStartMainActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, MainActivity.class);
@@ -81,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
                 catch (Exception ex){
                     Toast.makeText(MainActivity.this, "无法启动指定Activity", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        findViewById(R.id.btnTestService).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TestServiceActivity.class));
             }
         });
 

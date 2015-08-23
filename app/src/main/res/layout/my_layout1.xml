@@ -50,4 +50,10 @@
         android:text="显示toast message"
         android:id="@+id/btnShowToast" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="服务测试"
+        android:id="@+id/btnTestService" />
+
 </LinearLayout>
