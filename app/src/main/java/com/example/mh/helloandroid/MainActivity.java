@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.Serializable;
 
@@ -68,6 +69,18 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("user", new User("tod", 10));
 
                 startActivity(i);
+            }
+        });
+
+        findViewById(R.id.btnShowToast).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    startActivity(new Intent("unknown"));
+                }
+                catch (Exception ex){
+                    Toast.makeText(MainActivity.this, "无法启动指定Activity", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
