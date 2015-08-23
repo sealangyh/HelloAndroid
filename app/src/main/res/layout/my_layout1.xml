@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动新的main activity"
+        android:id="@+id/btnStartMainActivity"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动另一个activity"
+        android:id="@+id/btnStartAnotherActivity" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开百度搜索页面"
+        android:id="@+id/btnOpenWebPage" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开一个对话框activity"
+        android:id="@+id/btnOpenDialogActivity" />
+
+    <TextView
+        android:layout_width="334dp"
+        android:layout_height="wrap_content"
+        android:text="This is a text view."
+        android:id="@+id/tvResult"
+        android:layout_weight="0.07" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity信息"
+        android:id="@+id/tvInfo"
+        android:layout_weight="0.07" />
+
+</LinearLayout>
