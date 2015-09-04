@@ -197,7 +197,7 @@ public class MiTabs2Activity extends AppCompatActivity implements ActionBar.TabL
                     iv.setImageResource(R.drawable.car2);
                     break;
                 case 2:
-                    iv.setImageResource(R.drawable.car1);
+                    iv.setImageResource(R.drawable.car3);
                     break;
                 default:
                     iv.setImageResource(R.drawable.car2);
