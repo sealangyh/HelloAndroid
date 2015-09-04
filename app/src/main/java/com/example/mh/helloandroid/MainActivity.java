@@ -91,6 +91,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btnOpenFramelayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MiFrameActivity.class));
+            }
+        });
+
+        findViewById(R.id.btnOpenTabbedFragment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MiTabs2Activity.class));
+            }
+        });
+
+        findViewById(R.id.btnTestCursorCoordination).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MiCoordinationActivity.class));
+            }
+        });
+
         System.out.println("onCreate");
     }
 

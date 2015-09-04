@@ -56,4 +56,22 @@
         android:text="服务测试"
         android:id="@+id/btnTestService" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开Framelayout"
+        android:id="@+id/btnOpenFramelayout" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开Tabbed fragment"
+        android:id="@+id/btnOpenTabbedFragment" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="鼠标移动坐标测试"
+        android:id="@+id/btnTestCursorCoordination" />
+
 </LinearLayout>

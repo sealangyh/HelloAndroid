@@ -37,6 +37,23 @@
             android:enabled="true"
             android:exported="true" >
         </service>
+
+        <activity
+            android:name=".MiFrameActivity"
+            android:label="@string/title_activity_mi_frame" >
+        </activity>
+        <activity
+            android:name=".MiTabsActivity"
+            android:label="@string/title_activity_mi_tabs" >
+        </activity>
+        <activity
+            android:name=".MiTabs2Activity"
+            android:label="@string/title_activity_mi_tabs2" >
+        </activity>
+        <activity
+            android:name=".MiCoordinationActivity"
+            android:label="@string/title_activity_mi_coordination" >
+        </activity>
     </application>
 
 </manifest>

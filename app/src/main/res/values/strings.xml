@@ -6,4 +6,12 @@
     <string name="title_activity_mi_another">MiAnotherActivity</string>
     <string name="title_activity_mi_dialog">MiDialog</string>
     <string name="title_activity_test_service">TestServiceActivity</string>
+    <string name="title_activity_mi_frame">MiFrameActivity</string>
+    <string name="title_activity_mi_tabs">MiTabsActivity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_mi_tabs2">MiTabs2Activity</string>
+    <string name="title_activity_mi_coordination">MiCoordinationActivity</string>
 </resources>
