@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mh.helloandroid" >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -53,6 +54,10 @@
         <activity
             android:name=".MiCoordinationActivity"
             android:label="@string/title_activity_mi_coordination" >
+        </activity>
+        <activity
+            android:name=".MiWebBrowseActivity"
+            android:label="@string/title_activity_mi_web_browse">
         </activity>
     </application>
 

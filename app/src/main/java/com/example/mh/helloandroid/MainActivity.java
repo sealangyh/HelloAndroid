@@ -105,6 +105,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btnOpenWebBrowser).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MiWebBrowseActivity.class));
+            }
+        });
+
         findViewById(R.id.btnTestCursorCoordination).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -27,27 +27,65 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="X:"
-                android:id="@+id/tvCoorX"
-                android:layout_below="@+id/tvCoorX"
-                android:layout_centerHorizontal="true" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="X1:"
+                    android:id="@+id/tvCoorX1"
+                    android:layout_below="@+id/tvCoorX"
+                    android:layout_weight="5"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Y1:"
+                    android:id="@+id/tvCoorY1"
+                    android:layout_below="@+id/tvCoorY"
+                    android:layout_weight="5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Y:"
-                android:id="@+id/tvCoorY"
-                android:layout_below="@+id/tvCoorY"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="invisible"
+                    android:text="X2:"
+                    android:id="@+id/tvCoorX2"
+                    android:layout_below="@+id/tvCoorX"
+                    android:layout_weight="5"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="invisible"
+                    android:text="Y2:"
+                    android:id="@+id/tvCoorY2"
+                    android:layout_below="@+id/tvCoorY"
+                    android:layout_weight="5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
     </RelativeLayout>
 
 
