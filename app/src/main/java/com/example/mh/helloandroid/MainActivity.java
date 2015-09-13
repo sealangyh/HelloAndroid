@@ -1,5 +1,6 @@
 package com.example.mh.helloandroid;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 
 import java.io.Serializable;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
     private TextView tvResult;
     private TextView tvInfo;
@@ -29,36 +30,51 @@ public class MainActivity extends AppCompatActivity {
         String sInfo = String.format("Task ID: %s\n Current Activity id: %s", getTaskId(), this.toString());
         tvInfo.setText(sInfo);
 
-        findViewById(R.id.btnStartMainActivity).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, MainActivity.class);
+        findViewById(R.id.btnStartMainActivity).setOnClickListener(this);
+        findViewById(R.id.btnStartAnotherActivity).setOnClickListener(this);
+        findViewById(R.id.btnOpenWebPage).setOnClickListener(this);
+        findViewById(R.id.btnOpenDialogActivity).setOnClickListener(this);
+        findViewById(R.id.btnShowToast).setOnClickListener(this);
+        findViewById(R.id.btnTestService).setOnClickListener(this);
+        findViewById(R.id.btnOpenFramelayout).setOnClickListener(this);
+        findViewById(R.id.btnOpenTabbedFragment).setOnClickListener(this);
+        findViewById(R.id.btnOpenWebBrowser).setOnClickListener(this);
+        findViewById(R.id.btnTestCursorCoordination).setOnClickListener(this);
+        findViewById(R.id.btnOpenMyCanvas).setOnClickListener(this);
+
+        System.out.println("onCreate");
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        tvResult.setText(String.format("输入的消息是：%s",data.getStringExtra("msg_result")));
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        Intent i = null;
+        switch (v.getId()){
+            case R.id.btnStartMainActivity:
+                i = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(i);
-            }
-        });
+                break;
 
-        findViewById(R.id.btnStartAnotherActivity).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//              startActivity(new Intent(MainActivity.this, MiAnotherActivity.class));
-
-                Intent i = new Intent(MainActivity.this, MiAnotherActivity.class);
+            case R.id.btnStartAnotherActivity:
+                //startActivity(new Intent(MainActivity.this, MiAnotherActivity.class));
+                i = new Intent(MainActivity.this, MiAnotherActivity.class);
                 int req_code = 100;
                 startActivityForResult(i, req_code);
-            }
-        });
+                break;
 
-        findViewById(R.id.btnOpenWebPage).setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
+            case R.id.btnOpenWebPage:
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baidu.com")));
-            }
-        });
+                break;
 
-        findViewById(R.id.btnOpenDialogActivity).setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, MiDialogActivity.class);
+            case R.id.btnOpenDialogActivity:
+                i = new Intent(MainActivity.this, MiDialogActivity.class);
                 i.putExtra("msg_greeting", "hello, this is a greeting message.");
 
                 Bundle b = new Bundle();
@@ -69,71 +85,41 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("user", new User("tod", 10));
 
                 startActivity(i);
-            }
-        });
+                break;
 
-        findViewById(R.id.btnShowToast).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            case R.id.btnShowToast:
                 try{
                     startActivity(new Intent("unknown"));
                 }
                 catch (Exception ex){
                     Toast.makeText(MainActivity.this, "无法启动指定Activity", Toast.LENGTH_SHORT).show();
                 }
-            }
-        });
+                break;
 
-        findViewById(R.id.btnTestService).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            case R.id.btnTestService:
                 startActivity(new Intent(MainActivity.this, TestServiceActivity.class));
-            }
-        });
+                break;
 
-        findViewById(R.id.btnOpenFramelayout).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            case R.id.btnOpenFramelayout:
                 startActivity(new Intent(MainActivity.this, MiFrameActivity.class));
-            }
-        });
+                break;
 
-        findViewById(R.id.btnOpenTabbedFragment).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            case R.id.btnOpenTabbedFragment:
                 startActivity(new Intent(MainActivity.this, MiTabs2Activity.class));
-            }
-        });
+                break;
 
-        findViewById(R.id.btnOpenWebBrowser).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            case R.id.btnOpenWebBrowser:
                 startActivity(new Intent(MainActivity.this, MiWebBrowseActivity.class));
-            }
-        });
+                break;
 
-        findViewById(R.id.btnTestCursorCoordination).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            case R.id.btnTestCursorCoordination:
                 startActivity(new Intent(MainActivity.this, MiCoordinationActivity.class));
-            }
-        });
+                break;
 
-        findViewById(R.id.btnOpenMyCanvas).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            case R.id.btnOpenMyCanvas:
                 startActivity(new Intent(MainActivity.this, MiCanvasActivity.class));
-            }
-        });
-
-        System.out.println("onCreate");
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        tvResult.setText(String.format("输入的消息是：%s",data.getStringExtra("msg_result")));
+                break;
+        }
     }
 
     @Override
@@ -193,4 +179,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
