@@ -119,6 +119,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btnOpenMyCanvas).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MiCanvasActivity.class));
+            }
+        });
+
         System.out.println("onCreate");
     }
 

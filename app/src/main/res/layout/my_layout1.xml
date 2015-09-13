@@ -89,6 +89,12 @@
         android:text="鼠标移动坐标测试"
         android:id="@+id/btnTestCursorCoordination" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="画布"
+        android:id="@+id/btnOpenMyCanvas" />
+
 </LinearLayout>
 
 </ScrollView>
