@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         findViewById(R.id.btnOpenWebBrowser).setOnClickListener(this);
         findViewById(R.id.btnTestCursorCoordination).setOnClickListener(this);
         findViewById(R.id.btnOpenMyCanvas).setOnClickListener(this);
+        findViewById(R.id.btnTestCamera).setOnClickListener(this);
 
         System.out.println("onCreate");
     }
@@ -118,6 +119,10 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
             case R.id.btnOpenMyCanvas:
                 startActivity(new Intent(MainActivity.this, MiCanvasActivity.class));
+                break;
+
+            case R.id.btnTestCamera:
+                startActivity(new Intent(MainActivity.this, MiCameraActivity.class));
                 break;
         }
     }

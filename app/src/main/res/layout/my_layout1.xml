@@ -95,6 +95,12 @@
         android:text="画布"
         android:id="@+id/btnOpenMyCanvas" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拍照测试"
+        android:id="@+id/btnTestCamera" />
+
 </LinearLayout>
 
 </ScrollView>

@@ -66,6 +66,10 @@
             android:name=".MiCanvasActivity"
             android:label="@string/title_activity_mi_canvas" >
         </activity>
+        <activity
+            android:name=".MiCameraActivity"
+            android:label="@string/title_activity_mi_camera" >
+        </activity>
     </application>
 
 </manifest>

@@ -16,4 +16,5 @@
     <string name="title_activity_mi_coordination">MiCoordinationActivity</string>
     <string name="title_activity_mi_web_browse">MiWebBrowseActivity</string>
     <string name="title_activity_mi_canvas">MiCanvasActivity</string>
+    <string name="title_activity_mi_camera">MiCameraActivity</string>
 </resources>
